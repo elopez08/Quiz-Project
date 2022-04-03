@@ -81,9 +81,9 @@ I'm going to use the same idea I did for the portfolio.  I'm going to make a few
 <section>
 Contains the text, buttons, and selections
 
-For this, I'm going to have two thing:  A <p> that defines to be a paragraph for the introduction screen:
+For this, I'm going to have two thing:  A p that defines to be a paragraph for the introduction screen:
 
--A <h1> and <p> that has both in black text and it is aligned in the center
+-A h1 and p that has both in black text and it is aligned in the center
 
 
 There's a <button> that's waiting to be pressed that'll take into the next state.
