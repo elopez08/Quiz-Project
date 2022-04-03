@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/style.css"> <!-- Add style sheet -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Quiz!</title>
+
+</head>
+
+<body>
+
+    <div>
+        <!-- This WILL need editing -->
+        <header>
+
+
+            <!-- How we're going to define the new structure -->
+
+
+            <!-- First child -->
+            <div id="box-header" class = "view-high-score">
+                <p>View High Scores</p>
+            </div>
+            <!-- End First Child -->
+
+            <!-- Second Child -->
+            <audio controls autoplay class = "audiowin">
+                <source src="./assets/sound/Swanky's-Swing.mp3" type="audio/ogg">
+                <source src="./assets/sound/Swanky's-Swing.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <!-- End Second Child -->
+
+            <!-- Third Child -->
+            <div class="high-score-content">
+                <p>Time: <span id="TimeLeft">xxx</span></p>
+            </div>
+            <!-- End Third Child -->
+
+
+
+            <!-- We're going to make a popup for the View Score -->
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1 id="mainp-area-box" class="title-score">High Scores!</h1>
+                    <table class="tablesize">
+                        <tr class="row">
+                            <th>Initial</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr class="row">
+                            <th>EL</th>
+                            <th>20</th>
+                        </tr>
+                        <tr class="row">
+                            <th id="initials">Dummy</th>
+                            <th id="quizscores">Dummy</th>
+                        </tr>
+                    </table>
+                    <!-- <button class="favorite styled" type="button" id = "StartQuiz">Start Quiz</button> -->
+                    <p id="question-paragraph"></p>
+                    
+                </div>
+            </div>
+
+            <!-- Popup end -->
+
+
+
+        </header>
+
+
+
+        <section class="boxsection">
+
+            <!-- We're goign to include a few things here for the start of the screen -->
+
+            <div>
+                <!-- We're starting the title with this default setting -->
+                <h1 id="title-start-question">Coding Quiz Challenge</h1>
+            </div>
+
+            <br/>
+
+            <div>
+                <!-- We're starting the paragraph default setting here -->
+                <p id="quiz-summary">Try to answer the following code related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+            </div>
+            <!-- Have this question invisible so that it can line up to the left -->
+            <div>
+                <h1 class = "questionalignleft" id="questionsforquiz"></h1>
+            </div>
+            <br/>
+            <!-- Selections for the quiz that's not visible just yet-->
+            <div class="buttonboxcontent">
+                <button class="favorite styled answerbtn" id="answer1"></button>
+                <button class="favorite styled answerbtn" id="answer2"></button>
+                <button class="favorite styled answerbtn" id="answer3"></button>
+                <button class="favorite styled answerbtn" id="answer4"></button>    
+            </div>
+
+            <!-- Submitting with Initial -->
+            <p id="InitialTextSentence"></p>
+            <textarea id="InitialTextBox"></textarea>
+
+            <!-- Call on this button when we are done with the test.  This happens when we are done with the quiz -->
+            <button class ="favorite styled" id="submitscore">Submit</button>
+            <br/>
+
+            <div>
+                <button class="favorite styled" type="button" id = "StartQuiz">Start Quiz</button>
+            </div>
+            <br/>
+            <br/>
+
+
+
+            <!-- This is going to be invisible.  I'm going to define a structure here so that when it is called, it'll  not only write the word (Correct/Incorrect), but it'll also add a border on top.  Since this is going to be the full length of it, it'll stretch across the whole thing.  -->
+
+            <!-- Display when we get it right or wrong -->
+            <footer class="boxfooter">
+                <h3 id="correctAnswerText" class = "grey-footer">Correct!</h3>
+                <h3 id="wrongAnswerText" class = "greyfooter">Incorrect!</h3>
+            </footer>
+
+        </section>
+
+    </div>
+    
+    <script src="./assets/css/script.js"></script>
+
+
+    <!-- I'm going to test here and see if the style is there -->
+
+
+</body>
+</html>

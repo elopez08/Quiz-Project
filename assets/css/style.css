@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*background-color: rgb(165, 168, 202);*/  /*This property is making ALL that has a background set to this color, including text.  Find a way around this*/
+    background-color: rgb(85, 85, 85);
+}
+
+
+/*
+
+    Universal declaration.  Remember that the format is:
+    (name of the element) : (the text that defines the element such as color)
+
+*/
+:root{
+
+    --main-lightteal-color: #67d6d6; /*use:  var(--main-white-color); */
+    --font-family-one: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*use: var(--font-family-one); */
+    --display-inline: inline-block; /*use: var(--display-inline); */
+    --font-color-one: teal;    /*Use: var(--font-color-one); */
+    --dark-color: #252525; /*use: var(--dark-color); */
+
+}
+
+/*
+
+    These are the universal declaration for:
+        -a (links that are defined in the document)
+        -p (PARAGRAPHS) (this is IMPORTANT since we're going to be using p!)
+        -h1 (used for the titles of the slides)
+
+*/
+
+a, p {
+    color: rgb(199, 91, 199);     /* Changing the link color to this */
+    text-decoration: none;              /* This is to ensure if there's a line or not */
+}
+
+
+h1 {
+    color: black;
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 30px;
+    color: white;
+}
+
+
+/* =========== End of Universal Declaration =========== */
+
+
+/* =========== Start of Header =========== */
+
+/*
+
+    Remember this is the one that defines on how the structure looks like.  For each, I'm going to make additional notes on what it is doing and being defined:
+
+*/
+
+/*This is taking the parent 'header' and having the following:
+
+    -having a padding, which is adding spacing on the box
+    -font style for the words inside it
+    -a background color that defines to be a dark color (which is also linked from the universal declaration)
+    -a font color
+    -the flex that not only displays it as a flex, having spacing in between it, and also having the childs be lined up one another in a horizantal plane
+
+*/
+header {
+
+    padding: 20px 0px 20px 0px;
+    font-family: var(--font-family-one);
+    /* background-color: var(--dark-color); */
+    color: var(--dark-color);
+
+    /*This is what's needed to have the text move.  Remember the following:
+    
+    display:flex causes the purple line
+    justify-content: space-between adds spacing on the contents
+    flex-wrap:wrap: if there is no space, it'll go to another line
+    */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+header .box-header{
+    padding: 0 30px 0 30px;
+}
+
+/* While inside the header, h1 has these being defined:
+
+    -spacing around it
+    -size of the font
+    -a background color that's behind the text
+    -the height of the box
+
+*/
+header h1 {
+
+    padding: 5px 5px 5px 35px;
+    /*We're taking out the inline display*/
+    /*display: var(--display-inline);*/
+    font-size: 48px;
+    background-color: purple;
+    height: 70px;
+
+}
+
+header h1 .questionalignleft {
+    text-align: left;
+}
+
+/*While inside the header, 'nav', the other child, is going to have the following: 
+
+    -background color
+    -spacing TOP ONLY
+    -a margin on the right
+    -indenting to be going to the right
+    -the size of the text
+
+*/
+header nav {
+    background-color: var(--dark-color);
+    padding-top: 15px;
+    margin-right: 70px;
+    float: right;
+    font-family: var(--font-family-one);
+    font-size: 20px;
+    /*Note that there is no inline display*/
+}
+
+/*We have a ul and an li list.  Is this COMPLETELY necessary?  Most likely not.  We may need to erase this.  All it's doing is identifying the tyle, making a background color and adding spacing.  However, if there's no list, this isn't needed
+
+*/
+header nav ul {
+    list-style-type: none;
+    background-color: var(--dark-color);
+}
+
+header nav ul li {
+    background-color: var(--dark-color);
+    display: var(--display-inline);
+    margin-left: 25px;
+}
+
+/* We're in the header, going to nav, that's inside ul, in the li, and any text that has 'a' in it */
+header nav ul li a {
+    background-color: var(--dark-color);
+    border-bottom-style: solid;     /* Adding solid line on the bottome of text */
+    padding: 0px 10px 0px 10px;                   /*Adding spacing around the text */
+    font-size: 25px;
+}
+
+.view-high-score, .high-score-content, .audiowin {
+    padding: 0 20px 0 20px;
+}
+
+/* =========== End of Header =========== */
+
+
+/* =========== Start of Section =========== */
+
+.boxsection{
+    text-align:center;
+    padding: 120px 200px 120px 200px;
+
+}
+
+.boxsection p{
+    font-size: 25px;
+}
+
+/*Change the style of the content so it matches the quiz pages*/
+.buttonboxcontent {
+
+    width: 350px;
+    text-align: left;
+
+}
+
+.btn, .btnscore, .styled {
+    width: 300px;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(131, 42, 123);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.answerbtn {
+    text-align: left;
+}
+
+/*Correct/Incorrect Text*/
+
+/*Hovering it will make a different color*/
+.btn, .btnscore, .styled:hover {
+    background-color: rgb(199, 102, 194);
+}
+
+/*When you click on it, it'll drop a shadow*/
+.btn, .btnscore, .styled:active {
+    box-shadow: inset -2px -2px 3px rgba(61, 61, 61, 0.6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.boxfooter {
+    width: 100%;
+    border-top : 5px solid rgb(93, 93, 93);
+}
+
+/*Modal Code*/
+.modal, .modal-two {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+.tablesize {
+    width: 100%;
+    height: 80%;
+}
+
+.row {
+    width: 50%;
+
+}
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .title-score{
+      text-align: center;
+  }
