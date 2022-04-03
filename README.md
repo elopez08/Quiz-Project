@@ -858,7 +858,7 @@ Finally, what happens next is this:
 
 This is listening in on the submitScoreEl.  When it triggers, we then have the modal display (which is the popout window), the BtnStartEl is shown AGAIN to retake the quiz, and we have the values that were extracted from the textBoxEl and the highscore (which is the timer).  This will now be saved to the highscore, which is now this:
 
-(show submit score)
+![Submit Score](https://github.com/elopez08/Quiz-Project/blob/main/assets/image/When-you-submit-score.PNG)
 
 The line below is linked to whatever the textcontent is from this and it'll reflect it on the value.  I have yet to add a new line for this, sadly, but for now, you can save it here
 
